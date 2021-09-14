@@ -21,3 +21,4 @@ function printOwing(invoice) {
 
   console.log(`고객명: ${invoice.customer}`);
 }
+module.exports = {};
