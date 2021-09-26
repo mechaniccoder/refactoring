@@ -60,4 +60,12 @@ function taxableCharge(aReading) {
 const taxableCharge = taxableCharge();
 
 // taxableCharge도 클래스의 메서드로 추출하자.
-// Reading class
+
+// client2
+
+const taxableCharge = aReading.taxableCharge;
+
+/**
+ *  getter를 활용해 필요한 시점에 계산해서 클라이언트에 데이터를 전달하도록 했는데,
+ *  이것의 장점은 데이터가 갱신된다고 하더라도, 계산해서 데이터를 제공하기 때문에 안정적이다.
+ * */
