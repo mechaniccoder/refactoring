@@ -23,3 +23,7 @@ https://velog.io/@y1andyu/Refactoring-%ED%81%B4%EB%9E%98%EC%8A%A4-%EC%B6%94%EC%B
 ### Hide Delegate(위임 숨기기)
 
 https://velog.io/@y1andyu/Refactoring-%EC%9C%84%EC%9E%84-%EC%88%A8%EA%B8%B0%EA%B8%B0
+
+### Move Function(함수 옮기기)
+
+https://velog.io/@y1andyu/Refactoring-%ED%95%A8%EC%88%98-%EC%98%AE%EA%B8%B0%EA%B8%B0
