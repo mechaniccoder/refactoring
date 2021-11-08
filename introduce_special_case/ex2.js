@@ -19,10 +19,15 @@ const records1 = {
 
 // client1
 const rawSite = acquireSite();
+const site = enrichSite(rawSite);
 const aCustomer = site.customer;
 let customerName;
 if (aCustomer === "미확인 고객") customerName = "거주자";
 else customerName = aCustomer.name;
+
+function enrichSite(inputSite) {
+  return _.cloneDeep(inputSite);
+}
 
 // clinet2
 const plan = aCustomer === "미확인 고객" ? registry.billingPlans.basic : aCustomer.billingPlan;
