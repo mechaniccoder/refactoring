@@ -37,7 +37,8 @@ function enrichSite(inputSite) {
 }
 
 function isUnknown(aCustomer) {
-  return aCustomer === "미확인 고객";
+  if (aCustomer === "미확인 고객") return true;
+  else return aCustomer.isUnknown;
 }
 
 // clinet2
