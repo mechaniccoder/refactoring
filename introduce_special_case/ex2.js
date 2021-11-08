@@ -26,7 +26,14 @@ if (isUnknown(aCustomer)) customerName = "거주자";
 else customerName = aCustomer.name;
 
 function enrichSite(inputSite) {
-  return _.cloneDeep(inputSite);
+  const result = _.cloneDeep(inputSite);
+  const unkownCustomer = {
+      isUnknown = true,
+  }
+
+  if (isUnknown(result.customer)) result.customer = unkownCustomer;
+  else result.customer.isUnknown = false;
+  return result;
 }
 
 function isUnknown(aCustomer) {
