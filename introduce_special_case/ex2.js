@@ -21,14 +21,17 @@ const records1 = {
 const rawSite = acquireSite();
 const site = enrichSite(rawSite);
 const aCustomer = site.customer;
-let customerName;
-if (isUnknown(aCustomer)) customerName = "거주자";
-else customerName = aCustomer.name;
+const customerName = aCustomer.name;
 
 function enrichSite(inputSite) {
   const result = _.cloneDeep(inputSite);
   const unkownCustomer = {
       isUnknown = true,
+      name: '거주자',
+      billingPlan: registry.billingPlans.basic,
+      paymentHistory: {
+          weeksDelinquentInLastYear: 0
+      }
   }
 
   if (isUnknown(result.customer)) result.customer = unkownCustomer;
@@ -37,13 +40,13 @@ function enrichSite(inputSite) {
 }
 
 function isUnknown(aCustomer) {
-  if (aCustomer === "미확인 고객") return true;
-  else return aCustomer.isUnknown;
+  return aCustomer.isUnknown;
 }
 
 // clinet2
-const plan = isUnknown(aCustomer) ? registry.billingPlans.basic : aCustomer.billingPlan;
+const plan = aCustomer.billingPlan
 
 // client3
-const weeksDelinquent = isUnknown(aCustomer) ? 0 : aCustomer.paymentHistory.weeksDelinquentInLastYear;
+const weeksDelinquent = aCustomer.paymentHistory.weeksDelinquentInLastYear;
+
 module.exports = {};
