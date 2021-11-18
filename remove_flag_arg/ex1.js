@@ -1,14 +1,6 @@
-aShipment.deliveryDate = deliveryDate(anOrder, true);
+aShipment.deliveryDate = rushDeliveryDate(anOrder);
 // or
-aShipment.deliveryDate = deliveryDate(anOrder, false);
-
-function deliveryDate(anOrder, isRush) {
-  if (isRush) {
-    return rushDeliveryDate(anOrder);
-  } else {
-    return regularDeliveryDate(anOrder);
-  }
-}
+aShipment.deliveryDate = regularDeliveryDate(anOrder);
 
 function rushDeliveryDate(anOrder) {
   let deliveryTime;
