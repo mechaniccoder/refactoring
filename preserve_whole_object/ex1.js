@@ -1,6 +1,4 @@
-const low = aRoom.daysTempRange.low;
-const high = aRoom.daysTempRange.high;
-if (!aPlan.withinRange(low, high)) {
+if (!aPlan.xxWithinRange(aRoom.daysTempRange)) {
   alerts.push("온도가 벗어났습니다.");
 }
 
