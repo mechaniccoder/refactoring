@@ -1,6 +1,11 @@
 const tempRange = aRoom.daysTempRange;
-const low = tempRange.low;
-const high = tempRange.high;
-const isWithinRange = aPlan.withinRange(low, high);
+const isWithinRange = xxWithinRange(aPlan, tempRange);
 if (!isWithinRange) {
+}
+
+function xxWithinRange(aPlan, tempRange) {
+  const low = tempRange.low;
+  const high = tempRange.high;
+  const isWithinRange = aPlan.withinRange(low, high);
+  return isWithinRange;
 }
