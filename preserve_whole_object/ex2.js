@@ -1,4 +1,6 @@
-const low = aRoom.daysTempRange.low;
-const high = aRoom.daysTempRange.high;
-if (!aPlan.withinRange(low, high)) {
+const tempRange = aRoom.daysTempRange;
+const low = tempRange.low;
+const high = tempRange.high;
+const isWithinRange = aPlan.withinRange(low, high);
+if (!isWithinRange) {
 }
