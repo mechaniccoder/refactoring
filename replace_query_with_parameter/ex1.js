@@ -1,8 +1,9 @@
 class HeatingPlan {
   get targetTemp() {
-    if (thermostat.selectedTemp > this._max) return this._max;
-    else if (thermostat.selectedTemp < this._min) return this._min;
-    else return thermostat.selectedTemp;
+    const selectedTemp = thermostat.selectedTemp;
+    if (selectedTemp > this._max) return this._max;
+    else if (selectedTemp < this._min) return this._min;
+    else return selectedTemp;
   }
 }
 
