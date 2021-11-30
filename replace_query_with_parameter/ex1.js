@@ -11,6 +11,6 @@ class HeatingPlan {
 }
 
 // client
-if (thePlan.targetTemp > thermostat.currentTemp) setToHeat();
-else if (thePlan.targetTemp < thermostat.currentTemp) setToCool();
+if (thePlan.newTargetTemp(thermostat.selectedTemp) > thermostat.currentTemp) setToHeat();
+else if (thePlan.newTargetTemp(thermostat.selectedTemp) < thermostat.currentTemp) setToCool();
 else setOff();
