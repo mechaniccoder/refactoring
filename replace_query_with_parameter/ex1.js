@@ -1,7 +1,6 @@
 class HeatingPlan {
   get targetTemp() {
-    const selectedTemp = thermostat.selectedTemp;
-    this.newTargetTemp(selectedTemp);
+    this.newTargetTemp(thermostat.selectedTemp);
   }
 
   newTargetTemp(selectedTemp) {
