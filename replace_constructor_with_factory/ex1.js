@@ -21,11 +21,11 @@ class Employee {
 }
 
 // client1
-candidate = createEmployee(document.name, document.empType);
+candidate = createEngineer(document.name, document.empType);
 
 // client2
-const leadEngineer = createEmployee(document.leadEngineer, "E");
+const leadEngineer = createEngineer(document.leadEngineer, "E");
 
-function createEmployee(name, typeCode) {
-  return new Employee(name, typeCode);
+function createEngineer(name) {
+  return new Employee(name, "E");
 }
