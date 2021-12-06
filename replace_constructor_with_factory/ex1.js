@@ -21,10 +21,10 @@ class Employee {
 }
 
 // client1
-candidate = new Employee(document.name, document.empType);
+candidate = createEmployee(document.name, document.empType);
 
 // client2
-const leadEngineer = new Employee(document.leadEngineer, "E");
+const leadEngineer = createEmployee(document.leadEngineer, "E");
 
 function createEmployee(name, typeCode) {
   return new Employee(name, typeCode);
