@@ -10,22 +10,25 @@ class Scorer {
   }
 
   execute() {
-    let result = 0;
-    let healthLevel = 0;
-    let highMediacalRiskFlag = false;
+    this.result = 0;
+    this.healthLevel = 0;
+    this.highMediacalRiskFlag = false;
 
-    if (this.medicalExam.isSmoker) {
-      healthLevel += 10;
-      highMediacalRiskFlag = true;
-    }
-
-    let certificationGrade = "regular";
+    this.scoreSmoke();
+    this.certificationGrade = "regular";
     if (this.scoringGuide.stateWithLowCertification(this.candidate.originState)) {
-      certificationGrade = "low";
-      healthLevel -= 5;
+      this.certificationGrade = "low";
+      this.healthLevel -= 5;
     }
 
-    result -= Math.max(healthLevel - 5, 0);
+    this.result -= Math.max(healthLevel - 5, 0);
     return result;
+  }
+
+  scoreSmoke() {
+    if (this.medicalExam.isSmoker) {
+      this.healthLevel += 10;
+      this.highMediacalRiskFlag = true;
+    }
   }
 }
