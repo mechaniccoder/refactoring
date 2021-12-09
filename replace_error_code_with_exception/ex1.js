@@ -6,14 +6,12 @@ function localShippingRules(country) {
 
 function calculateShippingCosts(anOrder) {
   const shippingRules = localShippingRules(anOrder.country);
-  if (shippingRules < 0) throw new Error("오류 존재");
 }
 
 // 호출차
 
-let status;
 try {
-  status = calculateShippingCosts(orderData);
+  calculateShippingCosts(orderData);
 } catch (e) {
   if (e instanceof OrderProcessingError) {
     errorList.push({ order: OrderData, errorCode: e.code });
@@ -21,7 +19,6 @@ try {
     throw e;
   }
 }
-if (status < 0) errorList.push({ order: orderData, errorCode: status });
 
 class OrderProcessingError extends Error {
   constructor(errorCode) {
