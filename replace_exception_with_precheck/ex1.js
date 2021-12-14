@@ -9,7 +9,9 @@ class ResourcePool {
       try {
         result = available.pop();
         allocated.add(result);
-      } catch (e) {}
+      } catch (e) {
+        throw new Error("unreachable!");
+      }
     }
 
     return result;
