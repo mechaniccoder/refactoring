@@ -1,12 +1,15 @@
 class ResourcePool {
   get() {
     let result;
-    try {
-      result = available.pop();
-      allocated.add(result);
-    } catch (e) {
+
+    if (available.isEmpty()) {
       result = Resource.create();
       allocated.add(result);
+    } else {
+      try {
+        result = available.pop();
+        allocated.add(result);
+      } catch (e) {}
     }
 
     return result;
