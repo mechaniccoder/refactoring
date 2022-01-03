@@ -2,14 +2,14 @@
 class Employee {
   constructor(name, type) {
     this._name = name;
+    this._type = type;
   }
 
   get typeString() {
     return this._type.toString();
   }
   set type(arg) {
-    this._type = arg;
-    Employee.createEmployeeType(arg);
+    this._type = Employee.createEmployeeType(arg);
   }
   static createEmployeeType(arg) {
     switch (arg) {
