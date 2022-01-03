@@ -1,16 +1,11 @@
 // 간접상속
 class Employee {
   constructor(name, type) {
-    this.validate(name, type);
     this._name = name;
-    this._type = type;
   }
 
   get typeString() {
     return this._type.toString();
-  }
-  get type() {
-    return this._type;
   }
   set type(arg) {
     this._type = arg;
@@ -35,12 +30,6 @@ class Employee {
 
   toString() {
     return `${this._name} ${this.capitalizedType}`;
-  }
-
-  validate(arg) {
-    if (!["engineer", "manager", "salesperson"].includes(arg)) {
-      throw new Error("TypeError");
-    }
   }
 }
 
