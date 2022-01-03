@@ -20,12 +20,16 @@ class Employee {
   }
 }
 
-class Enginneer extends Employee {
+class Engineer extends Employee {
   get type() {
     return "engineer";
   }
 }
 
 function createEmplyee(name, type) {
+  switch (type) {
+    case "engineer":
+      return new Engineer(name, type);
+  }
   return new Employee(name, type);
 }
