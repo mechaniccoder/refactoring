@@ -5,6 +5,10 @@ class Employee {
     this._type = type;
   }
 
+  get type() {
+    return this._type;
+  }
+
   validateType(arg) {
     if (!["engineer", "manager", "salesperson"].includes(arg)) {
       throw new Error("TypeError");
@@ -12,6 +16,6 @@ class Employee {
   }
 
   toString() {
-    return `${this._name} ${this._type}`;
+    return `${this._name} ${this.type}`;
   }
 }
