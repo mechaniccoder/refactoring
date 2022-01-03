@@ -1,6 +1,5 @@
 class Employee {
-  constructor(name, type) {
-    this.validateType(type);
+  constructor(name) {
     this._name = name;
   }
 
@@ -36,10 +35,12 @@ class SalesPerson extends Employee {
 function createEmplyee(name, type) {
   switch (type) {
     case "engineer":
-      return new Engineer(name, type);
+      return new Engineer(name);
     case "manager":
-      return new Manager(name, type);
+      return new Manager(name);
     case "salesperson":
-      return new SalesPerson(name, type);
+      return new SalesPerson(name);
+    default:
+      throw new Error("TypeError");
   }
 }
