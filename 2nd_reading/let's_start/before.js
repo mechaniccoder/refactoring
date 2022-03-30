@@ -8,34 +8,41 @@ function statement(invoice, plays) {
   });
 
   for (let perf of invoice.performances) {
-    const play = plays[perf.playID];
-    let thisAmount = 0;
+    volumeCredits += Math.max(perf.audience - 30, 0);
+    if ("comedy" === playFor(perf).type) volumeCredits += Math.floor(pref.audience / 5);
 
-    switch (play.type) {
+    result += `${playFor(perf).name}: ${format(amountFor(perf) / 100)} ${pref.audience}seats`;
+
+    result += `${playFor(perf).name}: ${format(amountFor(perf) / 100)} ${perf.audience}seats`;
+    totalAmount += amountFor(perf);
+  }
+  result += `총액 ${format(totalAmount / 100)}`;
+  result += `적립 ${volumeCredits}`;
+
+  return result;
+
+  function amountFor(aPerformance) {
+    let result = 0;
+    switch (playFor(aPerformance).type) {
       case "tragedy":
-        thisAmount = 40000;
-        if (perf.audience > 30) {
-          thisAmount += 1000 * (perf.audience - 30);
+        result = 40000;
+        if (aPerformance.audience > 30) {
+          result += 1000 * (aPerformance.audience - 30);
         }
       case "comedy":
-        thisAmount = 3000;
-        if (perf.audience > 20) {
-          thisAmount += 1000 + 500 * (perf.audience - 20);
+        result = 3000;
+        if (aPerformance.audience > 20) {
+          result += 1000 + 500 * (aPerformance.audience - 20);
         }
-        thisAmount += 300 * pref.audience;
+        result += 300 * pref.audience;
         break;
       default:
         throw new Error("error");
     }
-
-    volumeCredits += Math.max(perf.audience - 30, 0);
-    if ("comedy" === play.type) volumeCredits += Math.floor(pref.audience / 5);
-
-    result += `${play.name}: ${format(thisAmount / 100)} ${pref.audience}seats`;
-
-    result += `${play.name}: ${format(thisAmount / 100)} ${perf.audience}seats`;
+    return result;
   }
-  result += `총액 ${format(totalAmount / 100)}`;
-  result += `적립 ${volumeCredits}`;
-  return result;
+
+  function playFor(aPerformance) {
+    return plays[aPerformance.playID];
+  }
 }
