@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6ae05de7-19de-428a-976a-c57d0d9b224c" name="Changes" comment="refactor: rename variable">
+    <list default="true" id="6ae05de7-19de-428a-976a-c57d0d9b224c" name="Changes" comment="refactor: extract function">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/2nd_reading/let's_start/before.js" beforeDir="false" afterPath="$PROJECT_DIR$/2nd_reading/let's_start/before.js" afterDir="false" />
     </list>
@@ -65,7 +65,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1648649786805</updated>
-      <workItem from="1648649787960" duration="4145000" />
+      <workItem from="1648649787960" duration="4410000" />
     </task>
     <task id="LOCAL-00001" summary="Init project">
       <created>1648649894079</created>
@@ -102,7 +102,14 @@
       <option name="project" value="LOCAL" />
       <updated>1648654972279</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="refactor: extract function">
+      <created>1648655105207</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1648655105207</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -127,9 +134,9 @@
     <MESSAGE value="refactor: replace temporary var with query" />
     <MESSAGE value="refactor: change function signature" />
     <MESSAGE value="refactor: inline variable" />
-    <MESSAGE value="refactor: extract function" />
     <MESSAGE value="refactor: rename variable" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor: rename variable" />
+    <MESSAGE value="refactor: extract function" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor: extract function" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
