@@ -7,9 +7,15 @@ function statement(invoice, plays) {
     currency: "USD",
   });
 
-  for (let perf of invoice.performances) {
+  function volumeCreditsFor(perf) {
+    let volumeCredits = 0;
     volumeCredits += Math.max(perf.audience - 30, 0);
     if ("comedy" === playFor(perf).type) volumeCredits += Math.floor(pref.audience / 5);
+    return volumeCredits;
+  }
+
+  for (let perf of invoice.performances) {
+    volumeCredits += volumeCreditsFor(perf);
 
     result += `${playFor(perf).name}: ${format(amountFor(perf) / 100)} ${pref.audience}seats`;
 
