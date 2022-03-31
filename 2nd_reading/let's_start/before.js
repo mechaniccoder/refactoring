@@ -1,18 +1,24 @@
 function statement(invoice, plays) {
-  let result = console.log(invoice.customer);
-  for (let perf of invoice.performances) {
-    result += `${playFor(perf).name}: ${usd(amountFor(perf) / 100)} ${pref.audience}seats`;
+  const statementData = {};
+  statementData.customer = invoice.customer
+  statementData.performances = invoice.performances.map(enrichPerformance)
+  statementData.totalVolumeCredits = totalVolumeCredits(statementData)
+  return renderPlainText(statementData, invoice, plays);
 
-    result += `${playFor(perf).name}: ${usd(amountFor(perf) / 100)} ${perf.audience}seats`;
+  function enrichPerformance(aPerformance) {
+    const result = {...aPerformance}
+    result.play = playFor(result)
+    result.amount = amountFor(result)
+    result.volumeCredits = volumeCreditsFor(result)
+    return result
   }
-  result += `총액 ${usd(amountFor(perf) / 100)}`;
-  result += `적립 ${totalVolumeCredits()}`;
 
-  return result;
-
+  function playFor(aPerformance) {
+    return plays[aPerformance.playID];
+  }
   function amountFor(aPerformance) {
     let result = 0;
-    switch (playFor(aPerformance).type) {
+    switch (aPerformance.play.type) {
       case "tragedy":
         result = 40000;
         if (aPerformance.audience > 30) {
@@ -23,16 +29,36 @@ function statement(invoice, plays) {
         if (aPerformance.audience > 20) {
           result += 1000 + 500 * (aPerformance.audience - 20);
         }
-        result += 300 * pref.audience;
+        result += 300 * perf.audience;
         break;
       default:
         throw new Error("error");
     }
     return result;
   }
-  function playFor(aPerformance) {
-    return plays[aPerformance.playID];
+  function volumeCreditsFor(aPerformance) {
+    let volumeCredits = 0;
+    volumeCredits += Math.max(aPerformance.audience - 30, 0);
+    if ("comedy" === aPerformance.play.type) volumeCredits += Math.floor(perf.audience / 5);
+    return volumeCredits;
   }
+  function totalVolumeCredits(data) {
+    return data.performances.reduce((total, perf) => total + perf.amount, 0)
+  }
+}
+
+function renderPlainText(data, plays) {
+  let result = console.log(data.customer);
+  for (let perf of data.performances) {
+    result += `${perf.play.name}: ${usd(perf.amount / 100)} ${perf.audience}seats`;
+
+    result += `${perf.play.name}: ${usd(perf.amount / 100)} ${perf.audience}seats`;
+  }
+  result += `총액 ${usd(amountFor(perf) / 100)}`;
+  result += `적립 ${data.totalVolumeCredits}`;
+
+  return result;
+
   function usd(aNumber) {
     return new Intl.NumberFormat("en-US", {
       style: "currency",
@@ -40,17 +66,5 @@ function statement(invoice, plays) {
     });
     return format;
   }
-  function volumeCreditsFor(aPerformance) {
-    let volumeCredits = 0;
-    volumeCredits += Math.max(aPerformance.audience - 30, 0);
-    if ("comedy" === playFor(aPerformance).type) volumeCredits += Math.floor(pref.audience / 5);
-    return volumeCredits;
-  }
-  function totalVolumeCredits() {
-    let volumeCredits = 0;
-    for (let perf of invoice.performances) {
-      volumeCredits += volumeCreditsFor(perf);
-    }
-    return volumeCredits;
-  }
+
 }

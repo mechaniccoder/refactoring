@@ -49,7 +49,7 @@
     <property name="node.js.selected.package.standard" value="" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="C:\Users\yuseu\WebstormProjects\refactoring\node_modules\prettier" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Haml" />
+    <property name="settings.editor.selected.configurable" value="settings.javascript.prettier" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -66,6 +66,7 @@
       <option name="presentableId" value="Default" />
       <updated>1648649786805</updated>
       <workItem from="1648649787960" duration="4410000" />
+      <workItem from="1648736731060" duration="1505000" />
     </task>
     <task id="LOCAL-00001" summary="Init project">
       <created>1648649894079</created>
