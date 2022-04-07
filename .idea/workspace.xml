@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6ae05de7-19de-428a-976a-c57d0d9b224c" name="Changes" comment="extract function - boilerplate">
+    <list default="true" id="6ae05de7-19de-428a-976a-c57d0d9b224c" name="Changes" comment="extract function - no local variable">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/2nd_reading/extract_func.js" beforeDir="false" afterPath="$PROJECT_DIR$/2nd_reading/extract_func.js" afterDir="false" />
     </list>
@@ -68,7 +68,7 @@
       <workItem from="1648649787960" duration="4410000" />
       <workItem from="1648736731060" duration="1976000" />
       <workItem from="1649083907354" duration="595000" />
-      <workItem from="1649343628419" duration="1192000" />
+      <workItem from="1649343628419" duration="1384000" />
     </task>
     <task id="LOCAL-00001" summary="Init project">
       <created>1648649894079</created>
@@ -133,7 +133,14 @@
       <option name="project" value="LOCAL" />
       <updated>1649344473775</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="extract function - no local variable">
+      <created>1649344878853</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1649344878853</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -163,7 +170,8 @@
     <MESSAGE value="refactor: split step" />
     <MESSAGE value="refactor: transform to pipeline" />
     <MESSAGE value="extract function - boilerplate" />
-    <option name="LAST_COMMIT_MESSAGE" value="extract function - boilerplate" />
+    <MESSAGE value="extract function - no local variable" />
+    <option name="LAST_COMMIT_MESSAGE" value="extract function - no local variable" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

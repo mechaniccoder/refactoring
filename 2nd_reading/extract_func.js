@@ -1,11 +1,8 @@
 function printOwing(invoice) {
-    let outstanding = 0;
 
     printBanner()
 
-    for (const o of invoice.orders) {
-        outstanding += o.amount;
-    }
+    let outstanding = calculateOutstanding(invoice);
 
     recordDueDate(invoice)
     printDetail(invoice, outstanding)
@@ -24,7 +21,14 @@ function printOwing(invoice) {
     function recordDueDate(invoice) {
         const today = Clock.today;
         invoice.dueDate = new Date(today.getFullYear(), today.getMonth(), today.getDate() + 30);
+    }
 
+    function calculateOutstanding(invoice) {
+        let result = 0;
+        for (const o of invoice.orders) {
+            result += o.amount;
+        }
+        return result
     }
 }
 
