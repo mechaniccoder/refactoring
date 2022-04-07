@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6ae05de7-19de-428a-976a-c57d0d9b224c" name="Changes" comment="refactor: split step">
+    <list default="true" id="6ae05de7-19de-428a-976a-c57d0d9b224c" name="Changes" comment="refactor: transform to pipeline">
+      <change afterPath="$PROJECT_DIR$/2nd_reading/extract_func.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2nd_reading/let's_start/before.js" beforeDir="false" afterPath="$PROJECT_DIR$/2nd_reading/let's_start/before.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +66,9 @@
       <option name="presentableId" value="Default" />
       <updated>1648649786805</updated>
       <workItem from="1648649787960" duration="4410000" />
-      <workItem from="1648736731060" duration="1719000" />
+      <workItem from="1648736731060" duration="1976000" />
+      <workItem from="1649083907354" duration="595000" />
+      <workItem from="1649343628419" duration="813000" />
     </task>
     <task id="LOCAL-00001" summary="Init project">
       <created>1648649894079</created>
@@ -117,7 +119,14 @@
       <option name="project" value="LOCAL" />
       <updated>1648738296550</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="refactor: transform to pipeline">
+      <created>1648738494881</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1648738494881</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -145,7 +154,8 @@
     <MESSAGE value="refactor: rename variable" />
     <MESSAGE value="refactor: extract function" />
     <MESSAGE value="refactor: split step" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor: split step" />
+    <MESSAGE value="refactor: transform to pipeline" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor: transform to pipeline" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
