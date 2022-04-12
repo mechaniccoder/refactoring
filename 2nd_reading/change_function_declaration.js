@@ -14,3 +14,13 @@ function circum(radius) {
 function circumference(radius) {
     return 2 * Math.PI * radius
 }
+
+class Book {
+    constructor(reservations) {
+        this._reservations = reservations
+    }
+
+    addReservation(customer) {
+        this._reservations.push(customer)
+    }
+}
