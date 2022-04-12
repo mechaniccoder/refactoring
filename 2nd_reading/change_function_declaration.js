@@ -34,10 +34,10 @@ class Book {
  * 모두 바꿨으면, 함수의 이름을 기존의 함수 이름으로 변경한다.
  */
 
-function isNewEngland(aCustomer) {
-    return ['ma', 'ct', 'me', 'vt', 'nf', 'ri'].includes(aCustomer.address.state)
+function isNewEngland(state) {
+    return ['ma', 'ct', 'me', 'vt', 'nf', 'ri'].includes(state)
 }
 
-const newEnglanders = someCustomers.filter(c => isNewEngland(c))
+const newEnglanders = someCustomers.filter(c => isNewEngland(c.address.state))
 
 module.exports = {}
