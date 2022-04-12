@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6ae05de7-19de-428a-976a-c57d0d9b224c" name="Changes" comment="Change function declaration - boiler plate">
+    <list default="true" id="6ae05de7-19de-428a-976a-c57d0d9b224c" name="Changes" comment="Change function declaration - simple procedure">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/2nd_reading/change_function_declaration.js" beforeDir="false" afterPath="$PROJECT_DIR$/2nd_reading/change_function_declaration.js" afterDir="false" />
     </list>
@@ -70,7 +70,7 @@
       <workItem from="1649083907354" duration="595000" />
       <workItem from="1649343628419" duration="1426000" />
       <workItem from="1649771146062" duration="171000" />
-      <workItem from="1649771354858" duration="577000" />
+      <workItem from="1649771354858" duration="719000" />
     </task>
     <task id="LOCAL-00001" summary="Init project">
       <created>1648649894079</created>
@@ -156,7 +156,14 @@
       <option name="project" value="LOCAL" />
       <updated>1649771914902</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Change function declaration - simple procedure">
+      <created>1649771966836</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1649771966836</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -189,7 +196,8 @@
     <MESSAGE value="extract function - no local variable" />
     <MESSAGE value="extract function - for mutated local variable" />
     <MESSAGE value="Change function declaration - boiler plate" />
-    <option name="LAST_COMMIT_MESSAGE" value="Change function declaration - boiler plate" />
+    <MESSAGE value="Change function declaration - simple procedure" />
+    <option name="LAST_COMMIT_MESSAGE" value="Change function declaration - simple procedure" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
