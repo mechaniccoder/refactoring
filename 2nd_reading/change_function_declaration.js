@@ -33,3 +33,11 @@ class Book {
  * 새 함수를 정의한 다음, 호출문에서 새로 만든 함수를 하나씩 바꿔나가자.
  * 모두 바꿨으면, 함수의 이름을 기존의 함수 이름으로 변경한다.
  */
+
+function isNewEngland(aCustomer) {
+    return ['ma', 'ct', 'me', 'vt', 'nf', 'ri'].includes(aCustomer.address.state)
+}
+
+const newEnglanders = someCustomers.filter(c => isNewEngland(c))
+
+module.exports = {}
