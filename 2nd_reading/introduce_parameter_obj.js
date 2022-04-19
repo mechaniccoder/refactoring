@@ -24,8 +24,18 @@ const station = {
   ]
 }
 
-function readingsOutsideRange(station, min, max) {
+function readingsOutsideRange(station, min, max, range) {
   return station.readings.filter(r => r.temp < min || r.temp > max)
 }
 
-readingsOutsideRange(station, operatingPlan.temperatureFloor, operatingPlan.temperatureCeiling)
+readingsOutsideRange(station, operatingPlan.temperatureFloor, operatingPlan.temperatureCeiling, null)
+
+class NumberRange {
+  constructor(min, max) {
+    this._data = {min, max}
+  }
+
+  get min() {return this._data.min}
+  get max() {return this._data.max}
+
+}
