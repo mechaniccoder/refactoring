@@ -19,9 +19,11 @@ class CatalogItem {
 }
 
 class Scroll {
-    constructor(id, title, tags, dateLastCleaned) {
+    constructor(id, title, tags, dateLastCleaned, catalogId, catalog) {
+        this._id = id;
+        this._title = title;
         this._lastCleaned = dateLastCleaned;
-        this._catalogItem = new CatalogItem(id, title, tags);
+        this._catalogItem =  catalog.getItem(catalogId);  
     }
 
     get id() {
@@ -45,3 +47,5 @@ class Scroll {
         return this._lastCleaned.until(targetDate, ChronoUnit.DAYS)
     }
 }
+
+const scrolls = aDocument.map(record => new Scroll(record.id, record.title,  record.lastCleaned,  record.catalogData.id, catalog));
